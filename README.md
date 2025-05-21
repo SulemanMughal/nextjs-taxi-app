@@ -1,34 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Taxi App
 
-## Getting Started
+A modern, responsive taxi booking application built with Next.js, designed to provide a seamless user experience for both riders and drivers.
 
-First, run the development server:
+## Objectives
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* Develop a user-friendly taxi booking platform using Next.js.
+* Implement real-time location tracking and mapping features.
+* Provide separate interfaces for riders and drivers.
+* Ensure responsive design for optimal performance on both desktop and mobile devices.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Frontend**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  * ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs\&logoColor=white) **Next.js**: A React framework for building server-side rendered applications.
+  * ![React](https://img.shields.io/badge/React-61DAFB?logo=react\&logoColor=black) **React**: A JavaScript library for building user interfaces.
+  * ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss\&logoColor=white) **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+  * ![Leaflet](https://img.shields.io/badge/Leaflet-3A8DFF?logo=leaflet\&logoColor=white) **Leaflet**: A JavaScript library for interactive maps.
+  * ![Mapbox](https://img.shields.io/badge/Mapbox-000000?logo=mapbox\&logoColor=white) **Mapbox**: A mapping platform for custom maps and geolocation services.
 
-## Learn More
+* **Backend**:
 
-To learn more about Next.js, take a look at the following resources:
+  * **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+  * **Express.js**: A minimal and flexible Node.js web application framework.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Database**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  * **MongoDB**: A NoSQL database for storing application data.
 
-## Deploy on Vercel
+* **Authentication**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  * **JWT (JSON Web Tokens)**: For secure user authentication and authorization.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Features
+
+* **User Authentication**: Secure login and registration system for both riders and drivers.
+* **Real-time Location Tracking**: Track the user's location and display nearby available drivers.
+* **Ride Booking**: Allow riders to book rides, view driver details, and track ride status.
+* **Driver Dashboard**: Enable drivers to accept or reject ride requests, view trip details, and manage earnings.
+* **Responsive Design**: Optimized for both desktop and mobile devices.
+* **Admin Panel**: Manage users, drivers, and rides from a centralized dashboard.
+
+## Applications
+
+This application is ideal for:
+
+* **Ride-hailing Services**: Providing a platform for users to book rides and drivers to accept requests.
+* **Transportation Companies**: Managing a fleet of vehicles and drivers.
+* **Developers**: Learning and implementing real-time location tracking and mapping features.
+
+## Future Enhancements
+
+To further enhance this project, consider implementing the following features:
+
+* **Payment Integration**: Allow users to pay for rides through the application.
+* **Rating and Reviews**: Enable riders and drivers to rate each other and provide feedback.
+* **Push Notifications**: Notify users and drivers about ride status updates.
+* **Ride History**: Maintain a history of past rides for users and drivers.
+* **Advanced Search Filters**: Allow users to filter drivers based on vehicle type, rating, and other criteria.
+
+## Installation
+
+To set up the project on your local machine, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/SulemanMughal/nextjs-taxi-app.git
+   cd nextjs-taxi-app
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**:
+
+   * Create a `.env.local` file in the root directory and add the following:
+
+     ```
+     MONGODB_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret
+     NEXTAUTH_URL=http://localhost:3000
+     MAPBOX_ACCESS_TOKEN=your_mapbox_access_token
+     ```
+   * Replace `your_mongodb_connection_string` with your MongoDB connection string.
+   * Replace `your_jwt_secret` with a secret key for JWT authentication.
+   * Replace `your_mapbox_access_token` with your Mapbox access token.
+
+4. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Access the application**:
+   Open a browser and go to `http://localhost:3000/`.
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request.
